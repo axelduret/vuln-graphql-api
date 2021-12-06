@@ -14,6 +14,5 @@ jobs:
         run: docker-compose up --detach
       - name: Run HawkScan to scan the app
         uses: stackhawk/hawkscan-action@v1.3.2
-        with: ${{ secrets.HAWK_API_KEY }}
-        
-#
+        with:
+          apiKey: ${{ secrets.HAWK_API_KEY }}
